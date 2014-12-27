@@ -1,9 +1,9 @@
 /*
- * File:         dht22_test_003.ino
- * Author:    Uncle RedBeard
- * Date:        22-DEC-2014
- * Desc:        reading temp and humidity from dht22 
- *                 print sensor readings to serial via get_tempRH() function
+ * File:       dht22_test_003.ino
+ * Author:  Uncle RedBeard
+ * Date:      22-DEC-2014
+ * Desc:      reading temp and humidity from dht22 
+ *               print sensor readings to serial via get_tempRH() function
  */
 #include <DHT.h>
 
