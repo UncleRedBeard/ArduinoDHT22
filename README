@@ -1,1 +1,14 @@
-Sketch testing out how to use DHT22 sensor.  Next steps to include adding monitoring and logging from other sensors.
+Sketches testing various ways to read from a DHT22 temperature and humidity sensor.
+
+Sketches
+--------
+	[dht_test.ino]
+	  * first test. following generic examples from the interwebs
+	
+	[dht_test_003.ino]
+	  * moved logic to read sensor values to get_tempRH()
+
+ToDo
+----
+	* add soil moisture sensor
+	* add soil temperature (weather proof temperature) sensor
