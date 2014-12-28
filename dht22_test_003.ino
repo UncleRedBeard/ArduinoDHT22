@@ -1,9 +1,9 @@
 /*
- * File:	dht22_test_003.ino
- * Author:	Uncle RedBeard
- * Date:	22-DEC-2014
- * Desc:	reading temp and humidity from dht22 
- *      	print sensor readings to serial via get_tempRH() function
+ * File:    dht22_test_003.ino
+ * Author:  Uncle RedBeard
+ * Date:    22-DEC-2014
+ * Desc:    reading temp and humidity from dht22 
+ *          print sensor readings to serial via get_tempRH() function
  */
 #include <DHT.h>
 
@@ -32,18 +32,21 @@ void get_tempRH(){
   float tempF = dht.readTemperature(true);
   
   if(isnan(humidity) || isnan(tempC) || isnan(tempF))  {
+    
     Serial.println("\nFailed to read from DHT sensor");
+    
+  } else {
+    
+    Serial.print("Humidity: ");
+    Serial.print(humidity);
+    Serial.println("%");
+    Serial.print("Temp:  ");
+    Serial.print(tempC);
+    Serial.print("*C | ");
+    Serial.print(tempF);
+    Serial.println("*F");
+  
   }
-  
-  Serial.print("Humidity: ");
-  Serial.print(humidity);
-  Serial.println("%");
-  Serial.print("Temperature: ");
-  Serial.print(tempC);
-  Serial.print("*C |");
-  Serial.print(tempF);
-  Serial.println("*F");
-  
 }
 
 //----------------------------------------
@@ -52,6 +55,6 @@ void loop(){
     
     prevMillis = millis();
     
-    get_tempRH();
+    get_tempRH();  
   }
 }
